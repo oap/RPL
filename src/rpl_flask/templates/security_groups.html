@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Groups</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="mb-4">Security Groups</h1>
+        <ul class="list-group">
+            {% for sg in security_groups %}
+            <li class="list-group-item">
+                <strong>{{ sg['Group Name'] }}</strong> (ID: {{ sg['Group ID'] }})
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+</body>
+</html>
