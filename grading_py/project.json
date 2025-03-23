@@ -1,0 +1,1349 @@
+{
+  "backup_plans": {
+    "ResponseMetadata": {
+      "RequestId": "18aeada6-0e13-4f49-91bd-4796950796ac",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 23 Mar 2025 17:10:14 GMT",
+        "content-type": "application/json",
+        "content-length": "954",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "18aeada6-0e13-4f49-91bd-4796950796ac"
+      },
+      "RetryAttempts": 0
+    },
+    "BackupPlansList": [
+      {
+        "BackupPlanArn": "arn:aws:backup:us-east-1:759713773111:backup-plan:aws/efs/73d922fb-9312-3a70-99c3-e69367f9fdad",
+        "BackupPlanId": "aws/efs/73d922fb-9312-3a70-99c3-e69367f9fdad",
+        "CreationDate": "2025-03-20T05:09:28.320000+00:00",
+        "VersionId": "N2RiYWJjNDItOGU2MC00OWM5LWE5NDAtNjE2ZmU0ZWU0ODZl",
+        "BackupPlanName": "aws/efs/automatic-backup-plan",
+        "CreatorRequestId": "aws/efs/automatic-backup-759713773111-us-east-1",
+        "LastExecutionDate": "2025-03-23T06:48:51.256000+00:00"
+      },
+      {
+        "BackupPlanArn": "arn:aws:backup:us-east-1:759713773111:backup-plan:d8d6cce1-cd27-442d-b208-f988bb3cfd6d",
+        "BackupPlanId": "d8d6cce1-cd27-442d-b208-f988bb3cfd6d",
+        "CreationDate": "2025-03-23T06:05:00.575000+00:00",
+        "VersionId": "ODMyZjBjM2YtZDZlMi00NWMyLThiN2ItOTc2ODBhYWRiM2Jj",
+        "BackupPlanName": "COMP2045-RPL-BACKUP",
+        "CreatorRequestId": "635eacfb-b810-4e51-81fb-25da73c8b017",
+        "LastExecutionDate": "2025-03-23T12:06:06.334000+00:00"
+      }
+    ]
+  },
+  "cloudwatch_alarms": {
+    "CompositeAlarms": [],
+    "MetricAlarms": [
+      {
+        "AlarmName": "Server Fail Alarm",
+        "AlarmArn": "arn:aws:cloudwatch:us-east-1:759713773111:alarm:Server Fail Alarm",
+        "AlarmConfigurationUpdatedTimestamp": "2025-03-21T06:52:25.156000+00:00",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:us-east-1:759713773111:Default_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "StateValue": "OK",
+        "StateReason": "Threshold Crossed: 1 out of the last 1 datapoints [0.0 (23/03/25 16:47:00)] was not greater than the threshold (1.0) (minimum 1 datapoint for ALARM -> OK transition).",
+        "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2025-03-23T16:52:17.190+0000\",\"startDate\":\"2025-03-23T16:47:00.000+0000\",\"statistic\":\"Average\",\"period\":300,\"recentDatapoints\":[0.0],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2025-03-23T16:47:00.000+0000\",\"sampleCount\":1.0,\"value\":0.0}]}",
+        "StateUpdatedTimestamp": "2025-03-23T16:52:17.193000+00:00",
+        "MetricName": "StatusCheckFailed",
+        "Namespace": "AWS/EC2",
+        "Statistic": "Average",
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": "i-049b556071730d826"
+          }
+        ],
+        "Period": 300,
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 1.0,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing",
+        "StateTransitionedTimestamp": "2025-03-23T16:52:17.193000+00:00"
+      }
+    ],
+    "ResponseMetadata": {
+      "RequestId": "a75d7335-242c-479d-ad50-06799bf69407",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "x-amzn-requestid": "a75d7335-242c-479d-ad50-06799bf69407",
+        "content-type": "text/xml",
+        "content-length": "2407",
+        "date": "Sun, 23 Mar 2025 17:10:14 GMT"
+      },
+      "RetryAttempts": 0
+    }
+  },
+  "sns_topics": {
+    "Topics": [
+      {
+        "TopicArn": "arn:aws:sns:us-east-1:759713773111:Default_CloudWatch_Alarms_Topic"
+      },
+      {
+        "TopicArn": "arn:aws:sns:us-east-1:759713773111:RedshiftSNS"
+      }
+    ],
+    "ResponseMetadata": {
+      "RequestId": "d7607503-6230-55c5-87bf-15592086e5a1",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "x-amzn-requestid": "d7607503-6230-55c5-87bf-15592086e5a1",
+        "date": "Sun, 23 Mar 2025 17:10:14 GMT",
+        "content-type": "text/xml",
+        "content-length": "503",
+        "connection": "keep-alive"
+      },
+      "RetryAttempts": 0
+    }
+  },
+  "efs_all": {
+    "ResponseMetadata": {
+      "RequestId": "e870d63b-6dbd-42ec-8bdc-2cadf243d1a0",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 23 Mar 2025 17:10:13 GMT",
+        "content-type": "application/json",
+        "content-length": "939",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e870d63b-6dbd-42ec-8bdc-2cadf243d1a0"
+      },
+      "RetryAttempts": 0
+    },
+    "FileSystems": [
+      {
+        "OwnerId": "759713773111",
+        "CreationToken": "console-cad5af59-dfb4-4289-a4ba-8f68f9ac237c",
+        "FileSystemId": "fs-0a4f6e79c48e6ab79",
+        "FileSystemArn": "arn:aws:elasticfilesystem:us-east-1:759713773111:file-system/fs-0a4f6e79c48e6ab79",
+        "CreationTime": "2025-03-20T05:09:19+00:00",
+        "LifeCycleState": "available",
+        "Name": "COMP2045-RPL-EFS",
+        "NumberOfMountTargets": 2,
+        "SizeInBytes": {
+          "Value": 6144,
+          "Timestamp": "2025-03-23T16:38:32+00:00",
+          "ValueInIA": 0,
+          "ValueInStandard": 6144,
+          "ValueInArchive": 0
+        },
+        "PerformanceMode": "generalPurpose",
+        "Encrypted": true,
+        "KmsKeyId": "arn:aws:kms:us-east-1:759713773111:key/959de7a0-f5ed-412d-9593-ff801b32042c",
+        "ThroughputMode": "elastic",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "COMP2045-RPL-EFS"
+          },
+          {
+            "Key": "aws:elasticfilesystem:default-backup",
+            "Value": "enabled"
+          }
+        ],
+        "FileSystemProtection": {
+          "ReplicationOverwriteProtection": "ENABLED"
+        }
+      }
+    ]
+  },
+  "efs_details": {
+    "fs-0a4f6e79c48e6ab79": {
+      "file_system": {
+        "ResponseMetadata": {
+          "RequestId": "1d1696a5-29f6-4582-8434-0ddd9dd991b6",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 23 Mar 2025 17:10:13 GMT",
+            "content-type": "application/json",
+            "content-length": "939",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "1d1696a5-29f6-4582-8434-0ddd9dd991b6"
+          },
+          "RetryAttempts": 0
+        },
+        "FileSystems": [
+          {
+            "OwnerId": "759713773111",
+            "CreationToken": "console-cad5af59-dfb4-4289-a4ba-8f68f9ac237c",
+            "FileSystemId": "fs-0a4f6e79c48e6ab79",
+            "FileSystemArn": "arn:aws:elasticfilesystem:us-east-1:759713773111:file-system/fs-0a4f6e79c48e6ab79",
+            "CreationTime": "2025-03-20T05:09:19+00:00",
+            "LifeCycleState": "available",
+            "Name": "COMP2045-RPL-EFS",
+            "NumberOfMountTargets": 2,
+            "SizeInBytes": {
+              "Value": 6144,
+              "Timestamp": "2025-03-23T16:38:32+00:00",
+              "ValueInIA": 0,
+              "ValueInStandard": 6144,
+              "ValueInArchive": 0
+            },
+            "PerformanceMode": "generalPurpose",
+            "Encrypted": true,
+            "KmsKeyId": "arn:aws:kms:us-east-1:759713773111:key/959de7a0-f5ed-412d-9593-ff801b32042c",
+            "ThroughputMode": "elastic",
+            "Tags": [
+              {
+                "Key": "Name",
+                "Value": "COMP2045-RPL-EFS"
+              },
+              {
+                "Key": "aws:elasticfilesystem:default-backup",
+                "Value": "enabled"
+              }
+            ],
+            "FileSystemProtection": {
+              "ReplicationOverwriteProtection": "ENABLED"
+            }
+          }
+        ]
+      },
+      "mount_targets": {
+        "ResponseMetadata": {
+          "RequestId": "9c399a2b-1943-43f2-8a1e-7e40e87dc1bc",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 23 Mar 2025 17:10:13 GMT",
+            "content-type": "application/json",
+            "content-length": "775",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "9c399a2b-1943-43f2-8a1e-7e40e87dc1bc"
+          },
+          "RetryAttempts": 0
+        },
+        "MountTargets": [
+          {
+            "OwnerId": "759713773111",
+            "MountTargetId": "fsmt-0cfba2b6687ba7012",
+            "FileSystemId": "fs-0a4f6e79c48e6ab79",
+            "SubnetId": "subnet-062fd88b627990558",
+            "LifeCycleState": "available",
+            "IpAddress": "10.5.9.231",
+            "NetworkInterfaceId": "eni-0ad95f72ee390e2a9",
+            "AvailabilityZoneId": "use1-az2",
+            "AvailabilityZoneName": "us-east-1a",
+            "VpcId": "vpc-060e3db7a34290fd2"
+          },
+          {
+            "OwnerId": "759713773111",
+            "MountTargetId": "fsmt-006a57ba8bddb97c4",
+            "FileSystemId": "fs-0a4f6e79c48e6ab79",
+            "SubnetId": "subnet-0fc90a2511cfb7bfd",
+            "LifeCycleState": "available",
+            "IpAddress": "10.5.22.213",
+            "NetworkInterfaceId": "eni-0e386d2c72b64654d",
+            "AvailabilityZoneId": "use1-az4",
+            "AvailabilityZoneName": "us-east-1b",
+            "VpcId": "vpc-060e3db7a34290fd2"
+          }
+        ]
+      },
+      "tags": {
+        "ResponseMetadata": {
+          "RequestId": "7e7ee3fb-c788-4764-856d-cb14616e196d",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 23 Mar 2025 17:10:13 GMT",
+            "content-type": "application/json",
+            "content-length": "149",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "7e7ee3fb-c788-4764-856d-cb14616e196d"
+          },
+          "RetryAttempts": 0
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "COMP2045-RPL-EFS"
+          },
+          {
+            "Key": "aws:elasticfilesystem:default-backup",
+            "Value": "enabled"
+          }
+        ]
+      }
+    }
+  },
+  "security_groups": {
+    "SecurityGroups": [
+      {
+        "GroupId": "sg-00b9221c7400d9817",
+        "IpPermissionsEgress": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ],
+        "VpcId": "vpc-01ca7ecbbf83397cf",
+        "SecurityGroupArn": "arn:aws:ec2:us-east-1:759713773111:security-group/sg-00b9221c7400d9817",
+        "OwnerId": "759713773111",
+        "GroupName": "default",
+        "Description": "default VPC security group",
+        "IpPermissions": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [
+              {
+                "UserId": "759713773111",
+                "GroupId": "sg-00b9221c7400d9817"
+              }
+            ],
+            "IpRanges": [],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ]
+      },
+      {
+        "GroupId": "sg-0f0730b00cf9cabaa",
+        "IpPermissionsEgress": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ],
+        "VpcId": "vpc-060e3db7a34290fd2",
+        "SecurityGroupArn": "arn:aws:ec2:us-east-1:759713773111:security-group/sg-0f0730b00cf9cabaa",
+        "OwnerId": "759713773111",
+        "GroupName": "EFSStorage",
+        "Description": "EFSSecurityGroup",
+        "IpPermissions": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 2049,
+            "ToPort": 2049,
+            "UserIdGroupPairs": [
+              {
+                "Description": "allow connection from app servers",
+                "UserId": "759713773111",
+                "GroupId": "sg-08a4f75e85e10da8a"
+              }
+            ],
+            "IpRanges": [],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ]
+      },
+      {
+        "GroupId": "sg-06f6f286ff15ea81a",
+        "IpPermissionsEgress": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ],
+        "VpcId": "vpc-041f8dd82ac945bd2",
+        "SecurityGroupArn": "arn:aws:ec2:us-east-1:759713773111:security-group/sg-06f6f286ff15ea81a",
+        "OwnerId": "759713773111",
+        "GroupName": "COMP2045-RPL-APP-SG",
+        "Description": "COMP2045-RPL-APP-SG",
+        "IpPermissions": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80,
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22,
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443,
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 2049,
+            "ToPort": 2049,
+            "UserIdGroupPairs": [
+              {
+                "UserId": "759713773111",
+                "GroupId": "sg-063182ca34d6465e3"
+              }
+            ],
+            "IpRanges": [],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ]
+      },
+      {
+        "GroupId": "sg-03024eca8b037cc2c",
+        "IpPermissionsEgress": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ],
+        "VpcId": "vpc-041f8dd82ac945bd2",
+        "SecurityGroupArn": "arn:aws:ec2:us-east-1:759713773111:security-group/sg-03024eca8b037cc2c",
+        "OwnerId": "759713773111",
+        "GroupName": "default",
+        "Description": "default VPC security group",
+        "IpPermissions": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [
+              {
+                "UserId": "759713773111",
+                "GroupId": "sg-03024eca8b037cc2c"
+              }
+            ],
+            "IpRanges": [],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ]
+      },
+      {
+        "GroupId": "sg-08a4f75e85e10da8a",
+        "IpPermissionsEgress": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ],
+        "VpcId": "vpc-060e3db7a34290fd2",
+        "SecurityGroupArn": "arn:aws:ec2:us-east-1:759713773111:security-group/sg-08a4f75e85e10da8a",
+        "OwnerId": "759713773111",
+        "GroupName": "FlaskAppServers",
+        "Description": "AppServerSecurityGroup",
+        "IpPermissions": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80,
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22,
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 5000,
+            "ToPort": 5000,
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443,
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 2049,
+            "ToPort": 2049,
+            "UserIdGroupPairs": [
+              {
+                "UserId": "759713773111",
+                "GroupId": "sg-0f0730b00cf9cabaa"
+              }
+            ],
+            "IpRanges": [],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ]
+      },
+      {
+        "GroupId": "sg-0de9f7cda4034bf69",
+        "IpPermissionsEgress": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ],
+        "VpcId": "vpc-060e3db7a34290fd2",
+        "SecurityGroupArn": "arn:aws:ec2:us-east-1:759713773111:security-group/sg-0de9f7cda4034bf69",
+        "OwnerId": "759713773111",
+        "GroupName": "default",
+        "Description": "default VPC security group",
+        "IpPermissions": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [
+              {
+                "UserId": "759713773111",
+                "GroupId": "sg-0de9f7cda4034bf69"
+              }
+            ],
+            "IpRanges": [],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ]
+      },
+      {
+        "GroupId": "sg-063182ca34d6465e3",
+        "IpPermissionsEgress": [
+          {
+            "IpProtocol": "-1",
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+              {
+                "CidrIp": "0.0.0.0/0"
+              }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ],
+        "VpcId": "vpc-041f8dd82ac945bd2",
+        "SecurityGroupArn": "arn:aws:ec2:us-east-1:759713773111:security-group/sg-063182ca34d6465e3",
+        "OwnerId": "759713773111",
+        "GroupName": "COMP2045-RPL-NFS-SG",
+        "Description": "COMP2045-RPL-NFS-SG",
+        "IpPermissions": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 2049,
+            "ToPort": 2049,
+            "UserIdGroupPairs": [
+              {
+                "UserId": "759713773111",
+                "GroupId": "sg-06f6f286ff15ea81a"
+              }
+            ],
+            "IpRanges": [],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+          }
+        ]
+      }
+    ],
+    "ResponseMetadata": {
+      "RequestId": "b8e628c2-5dc7-4130-a57b-98af0685d6a1",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "x-amzn-requestid": "b8e628c2-5dc7-4130-a57b-98af0685d6a1",
+        "cache-control": "no-cache, no-store",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "accept-encoding",
+        "content-type": "text/xml;charset=UTF-8",
+        "content-length": "6744",
+        "date": "Sun, 23 Mar 2025 17:10:13 GMT",
+        "server": "AmazonEC2"
+      },
+      "RetryAttempts": 0
+    }
+  },
+  "s3": {
+    "buckets_list": [
+      "cloudrpl-20250320"
+    ],
+    "buckets_details": {
+      "cloudrpl-20250320": {
+        "versioning": {
+          "ResponseMetadata": {
+            "RequestId": "C0899DEF7FV9K2WV",
+            "HostId": "IgklBVM88lMoF8P/kldILgBghNt0OIR9j250M0YhAAdcX1TtwyBOsNdmVKfCVXjJGsCX2j+/nkE=",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+              "x-amz-id-2": "IgklBVM88lMoF8P/kldILgBghNt0OIR9j250M0YhAAdcX1TtwyBOsNdmVKfCVXjJGsCX2j+/nkE=",
+              "x-amz-request-id": "C0899DEF7FV9K2WV",
+              "date": "Sun, 23 Mar 2025 17:10:14 GMT",
+              "transfer-encoding": "chunked",
+              "server": "AmazonS3"
+            },
+            "RetryAttempts": 0
+          },
+          "Status": "Enabled"
+        },
+        "encryption": {
+          "ResponseMetadata": {
+            "RequestId": "C082J2XAQDGRMC1A",
+            "HostId": "no758h6K3AFd41NpTCdn2+tpwjt5wTMAbeAc8fjidF8tZJVozXKnomuYXB4kUQ9GvuFjYcwVEjI=",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+              "x-amz-id-2": "no758h6K3AFd41NpTCdn2+tpwjt5wTMAbeAc8fjidF8tZJVozXKnomuYXB4kUQ9GvuFjYcwVEjI=",
+              "x-amz-request-id": "C082J2XAQDGRMC1A",
+              "date": "Sun, 23 Mar 2025 17:10:14 GMT",
+              "transfer-encoding": "chunked",
+              "server": "AmazonS3"
+            },
+            "RetryAttempts": 0
+          },
+          "ServerSideEncryptionConfiguration": {
+            "Rules": [
+              {
+                "ApplyServerSideEncryptionByDefault": {
+                  "SSEAlgorithm": "AES256"
+                },
+                "BucketKeyEnabled": true
+              }
+            ]
+          }
+        },
+        "policy": {
+          "ResponseMetadata": {
+            "RequestId": "C081NDY2KG2WMY74",
+            "HostId": "10ia5X6iiA2XH8HFAufYyvjwjA+rtjTxJhCbCuZoPKEqW/B2/pnFMMm6qj95WXagnyswET4D0pg=",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+              "x-amz-id-2": "10ia5X6iiA2XH8HFAufYyvjwjA+rtjTxJhCbCuZoPKEqW/B2/pnFMMm6qj95WXagnyswET4D0pg=",
+              "x-amz-request-id": "C081NDY2KG2WMY74",
+              "date": "Sun, 23 Mar 2025 17:10:14 GMT",
+              "content-type": "application/json",
+              "transfer-encoding": "chunked",
+              "server": "AmazonS3"
+            },
+            "RetryAttempts": 0
+          },
+          "Policy": "{\"Version\":\"2012-10-17\",\"Id\":\"Policy1742447537749\",\"Statement\":[{\"Sid\":\"Stmt1742447503026\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::759713773111:role/LabRole\"},\"Action\":\"s3:*\",\"Resource\":\"arn:aws:s3:::cloudrpl-20250320\"}]}"
+        },
+        "lifecycle": {
+          "ResponseMetadata": {
+            "RequestId": "C08FFM77K1FBGS28",
+            "HostId": "Qz8aKjytyHkDqlZMENMV/Xwrz8ldyDv4qJuEYOjCpYB9Tp9CDp+y7Q1rjf9ypBnBBn9kD7EDW4o=",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+              "x-amz-id-2": "Qz8aKjytyHkDqlZMENMV/Xwrz8ldyDv4qJuEYOjCpYB9Tp9CDp+y7Q1rjf9ypBnBBn9kD7EDW4o=",
+              "x-amz-request-id": "C08FFM77K1FBGS28",
+              "date": "Sun, 23 Mar 2025 17:10:14 GMT",
+              "x-amz-transition-default-minimum-object-size": "all_storage_classes_128K",
+              "content-length": "285",
+              "server": "AmazonS3"
+            },
+            "RetryAttempts": 0
+          },
+          "TransitionDefaultMinimumObjectSize": "all_storage_classes_128K",
+          "Rules": [
+            {
+              "ID": "zeroday",
+              "Filter": {},
+              "Status": "Enabled",
+              "Transitions": [
+                {
+                  "Days": 0,
+                  "StorageClass": "INTELLIGENT_TIERING"
+                }
+              ]
+            }
+          ]
+        },
+        "public_access": {}
+      }
+    }
+  },
+  "vpcs": {
+    "Vpcs": [
+      {
+        "OwnerId": "759713773111",
+        "InstanceTenancy": "default",
+        "CidrBlockAssociationSet": [
+          {
+            "AssociationId": "vpc-cidr-assoc-0770902d6e8522e3d",
+            "CidrBlock": "172.31.0.0/16",
+            "CidrBlockState": {
+              "State": "associated"
+            }
+          }
+        ],
+        "IsDefault": true,
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "VpcId": "vpc-01ca7ecbbf83397cf",
+        "State": "available",
+        "CidrBlock": "172.31.0.0/16",
+        "DhcpOptionsId": "dopt-023ba03559dd26a57"
+      },
+      {
+        "OwnerId": "759713773111",
+        "InstanceTenancy": "default",
+        "CidrBlockAssociationSet": [
+          {
+            "AssociationId": "vpc-cidr-assoc-04f22e90f9fc8b85d",
+            "CidrBlock": "10.5.0.0/16",
+            "CidrBlockState": {
+              "State": "associated"
+            }
+          }
+        ],
+        "IsDefault": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "COMP2045-RPL-VPC1"
+          }
+        ],
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "VpcId": "vpc-041f8dd82ac945bd2",
+        "State": "available",
+        "CidrBlock": "10.5.0.0/16",
+        "DhcpOptionsId": "dopt-023ba03559dd26a57"
+      },
+      {
+        "OwnerId": "759713773111",
+        "InstanceTenancy": "default",
+        "CidrBlockAssociationSet": [
+          {
+            "AssociationId": "vpc-cidr-assoc-0b15b8aad0f9e081b",
+            "CidrBlock": "10.5.0.0/16",
+            "CidrBlockState": {
+              "State": "associated"
+            }
+          }
+        ],
+        "IsDefault": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "rpl-vpc"
+          }
+        ],
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "VpcId": "vpc-060e3db7a34290fd2",
+        "State": "available",
+        "CidrBlock": "10.5.0.0/16",
+        "DhcpOptionsId": "dopt-023ba03559dd26a57"
+      }
+    ],
+    "ResponseMetadata": {
+      "RequestId": "e01d503c-21a6-4a9a-8ca6-40f12eade64a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "x-amzn-requestid": "e01d503c-21a6-4a9a-8ca6-40f12eade64a",
+        "cache-control": "no-cache, no-store",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "accept-encoding",
+        "content-type": "text/xml;charset=UTF-8",
+        "content-length": "2117",
+        "date": "Sun, 23 Mar 2025 17:10:07 GMT",
+        "server": "AmazonEC2"
+      },
+      "RetryAttempts": 0
+    }
+  },
+  "ec2": {
+    "Reservations": [
+      {
+        "ReservationId": "r-0a1a7d8099fcaf7d5",
+        "OwnerId": "759713773111",
+        "Groups": [],
+        "Instances": [
+          {
+            "Architecture": "x86_64",
+            "BlockDeviceMappings": [
+              {
+                "DeviceName": "/dev/sda1",
+                "Ebs": {
+                  "AttachTime": "2025-03-20T05:20:21+00:00",
+                  "DeleteOnTermination": true,
+                  "Status": "attached",
+                  "VolumeId": "vol-02fa0bcb2a3607520"
+                }
+              }
+            ],
+            "ClientToken": "4cc78ce8-bb1e-4da7-9b89-aebf21112d77",
+            "EbsOptimized": false,
+            "EnaSupport": true,
+            "Hypervisor": "xen",
+            "IamInstanceProfile": {
+              "Arn": "arn:aws:iam::759713773111:instance-profile/LabInstanceProfile",
+              "Id": "AIPA3BYTYGY36HRQB4TLG"
+            },
+            "NetworkInterfaces": [
+              {
+                "Association": {
+                  "IpOwnerId": "759713773111",
+                  "PublicDnsName": "ec2-3-233-18-105.compute-1.amazonaws.com",
+                  "PublicIp": "3.233.18.105"
+                },
+                "Attachment": {
+                  "AttachTime": "2025-03-20T05:20:21+00:00",
+                  "AttachmentId": "eni-attach-08205e4d9dbbf819a",
+                  "DeleteOnTermination": true,
+                  "DeviceIndex": 0,
+                  "Status": "attached",
+                  "NetworkCardIndex": 0
+                },
+                "Description": "",
+                "Groups": [
+                  {
+                    "GroupId": "sg-08a4f75e85e10da8a",
+                    "GroupName": "FlaskAppServers"
+                  }
+                ],
+                "Ipv6Addresses": [],
+                "MacAddress": "0a:ff:ff:a1:57:c9",
+                "NetworkInterfaceId": "eni-08bf15453d57dc95f",
+                "OwnerId": "759713773111",
+                "PrivateDnsName": "ip-10-5-20-83.ec2.internal",
+                "PrivateIpAddress": "10.5.20.83",
+                "PrivateIpAddresses": [
+                  {
+                    "Association": {
+                      "IpOwnerId": "759713773111",
+                      "PublicDnsName": "ec2-3-233-18-105.compute-1.amazonaws.com",
+                      "PublicIp": "3.233.18.105"
+                    },
+                    "Primary": true,
+                    "PrivateDnsName": "ip-10-5-20-83.ec2.internal",
+                    "PrivateIpAddress": "10.5.20.83"
+                  }
+                ],
+                "SourceDestCheck": true,
+                "Status": "in-use",
+                "SubnetId": "subnet-0fc90a2511cfb7bfd",
+                "VpcId": "vpc-060e3db7a34290fd2",
+                "InterfaceType": "interface",
+                "Operator": {
+                  "Managed": false
+                }
+              }
+            ],
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "SecurityGroups": [
+              {
+                "GroupId": "sg-08a4f75e85e10da8a",
+                "GroupName": "FlaskAppServers"
+              }
+            ],
+            "SourceDestCheck": true,
+            "Tags": [
+              {
+                "Key": "Name",
+                "Value": "COMP2045-RPL-APP"
+              }
+            ],
+            "VirtualizationType": "hvm",
+            "CpuOptions": {
+              "CoreCount": 2,
+              "ThreadsPerCore": 1
+            },
+            "CapacityReservationSpecification": {
+              "CapacityReservationPreference": "open"
+            },
+            "HibernationOptions": {
+              "Configured": false
+            },
+            "MetadataOptions": {
+              "State": "applied",
+              "HttpTokens": "required",
+              "HttpPutResponseHopLimit": 2,
+              "HttpEndpoint": "enabled",
+              "HttpProtocolIpv6": "disabled",
+              "InstanceMetadataTags": "disabled"
+            },
+            "EnclaveOptions": {
+              "Enabled": false
+            },
+            "BootMode": "uefi-preferred",
+            "PlatformDetails": "Linux/UNIX",
+            "UsageOperation": "RunInstances",
+            "UsageOperationUpdateTime": "2025-03-20T05:20:21+00:00",
+            "PrivateDnsNameOptions": {
+              "HostnameType": "ip-name",
+              "EnableResourceNameDnsARecord": false,
+              "EnableResourceNameDnsAAAARecord": false
+            },
+            "MaintenanceOptions": {
+              "AutoRecovery": "default"
+            },
+            "CurrentInstanceBootMode": "legacy-bios",
+            "NetworkPerformanceOptions": {
+              "BandwidthWeighting": "default"
+            },
+            "Operator": {
+              "Managed": false
+            },
+            "InstanceId": "i-049b556071730d826",
+            "ImageId": "ami-04b4f1a9cf54c11d0",
+            "State": {
+              "Code": 16,
+              "Name": "running"
+            },
+            "PrivateDnsName": "ip-10-5-20-83.ec2.internal",
+            "PublicDnsName": "ec2-3-233-18-105.compute-1.amazonaws.com",
+            "StateTransitionReason": "",
+            "KeyName": "rpl",
+            "AmiLaunchIndex": 0,
+            "ProductCodes": [],
+            "InstanceType": "t2.medium",
+            "LaunchTime": "2025-03-23T16:44:10+00:00",
+            "Placement": {
+              "GroupName": "",
+              "Tenancy": "default",
+              "AvailabilityZone": "us-east-1b"
+            },
+            "Monitoring": {
+              "State": "disabled"
+            },
+            "SubnetId": "subnet-0fc90a2511cfb7bfd",
+            "VpcId": "vpc-060e3db7a34290fd2",
+            "PrivateIpAddress": "10.5.20.83",
+            "PublicIpAddress": "3.233.18.105"
+          }
+        ]
+      }
+    ],
+    "ResponseMetadata": {
+      "RequestId": "190ef09b-7cce-4365-8b43-8079e5b5ba78",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "x-amzn-requestid": "190ef09b-7cce-4365-8b43-8079e5b5ba78",
+        "cache-control": "no-cache, no-store",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "accept-encoding",
+        "content-type": "text/xml;charset=UTF-8",
+        "content-length": "4956",
+        "date": "Sun, 23 Mar 2025 17:10:08 GMT",
+        "server": "AmazonEC2"
+      },
+      "RetryAttempts": 0
+    }
+  },
+  "efs_mount_check": {
+    "efs_mount_check": {
+      "CommandId": "fbbf4d30-aef8-4693-964c-f1d97419aea8",
+      "InstanceId": "i-049b556071730d826",
+      "Comment": "",
+      "DocumentName": "AWS-RunShellScript",
+      "DocumentVersion": "$DEFAULT",
+      "PluginName": "aws:runShellScript",
+      "ResponseCode": 0,
+      "ExecutionStartDateTime": "2025-03-23T17:10:08.428Z",
+      "ExecutionElapsedTime": "PT0.008S",
+      "ExecutionEndDateTime": "2025-03-23T17:10:08.428Z",
+      "Status": "Success",
+      "StatusDetails": "Success",
+      "StandardOutputContent": "fs-0a4f6e79c48e6ab79.efs.us-east-1.amazonaws.com:/ on /mnt/efs type nfs4 (rw,relatime,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,hard,noresvport,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=10.5.20.83,local_lock=none,addr=10.5.22.213,_netdev)\n",
+      "StandardOutputUrl": "",
+      "StandardErrorContent": "",
+      "StandardErrorUrl": "",
+      "CloudWatchOutputConfig": {
+        "CloudWatchLogGroupName": "",
+        "CloudWatchOutputEnabled": false
+      },
+      "ResponseMetadata": {
+        "RequestId": "84923bd4-b8e9-42ac-b66f-327e2565f141",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "server": "Server",
+          "date": "Sun, 23 Mar 2025 17:10:13 GMT",
+          "content-type": "application/x-amz-json-1.1",
+          "content-length": "835",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "84923bd4-b8e9-42ac-b66f-327e2565f141"
+        },
+        "RetryAttempts": 0
+      }
+    }
+  },
+  "subnets": {
+    "Subnets": [
+      {
+        "AvailabilityZoneId": "use1-az2",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-06aae4105991015cb",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-06aae4105991015cb",
+        "State": "available",
+        "VpcId": "vpc-01ca7ecbbf83397cf",
+        "CidrBlock": "172.31.80.0/20",
+        "AvailableIpAddressCount": 4091,
+        "AvailabilityZone": "us-east-1a",
+        "DefaultForAz": true,
+        "MapPublicIpOnLaunch": true
+      },
+      {
+        "AvailabilityZoneId": "use1-az6",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-03f192c34a621da49",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-03f192c34a621da49",
+        "State": "available",
+        "VpcId": "vpc-01ca7ecbbf83397cf",
+        "CidrBlock": "172.31.32.0/20",
+        "AvailableIpAddressCount": 4091,
+        "AvailabilityZone": "us-east-1c",
+        "DefaultForAz": true,
+        "MapPublicIpOnLaunch": true
+      },
+      {
+        "AvailabilityZoneId": "use1-az4",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cloud_rpl-subnet-public2-us-east-1b"
+          }
+        ],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-0fc90a2511cfb7bfd",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-0fc90a2511cfb7bfd",
+        "State": "available",
+        "VpcId": "vpc-060e3db7a34290fd2",
+        "CidrBlock": "10.5.16.0/20",
+        "AvailableIpAddressCount": 4089,
+        "AvailabilityZone": "us-east-1b",
+        "DefaultForAz": false,
+        "MapPublicIpOnLaunch": false
+      },
+      {
+        "AvailabilityZoneId": "use1-az4",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-07144e96e75ec8fd1",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-07144e96e75ec8fd1",
+        "State": "available",
+        "VpcId": "vpc-01ca7ecbbf83397cf",
+        "CidrBlock": "172.31.16.0/20",
+        "AvailableIpAddressCount": 4091,
+        "AvailabilityZone": "us-east-1b",
+        "DefaultForAz": true,
+        "MapPublicIpOnLaunch": true
+      },
+      {
+        "AvailabilityZoneId": "use1-az5",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-06d9baac303e25324",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-06d9baac303e25324",
+        "State": "available",
+        "VpcId": "vpc-01ca7ecbbf83397cf",
+        "CidrBlock": "172.31.64.0/20",
+        "AvailableIpAddressCount": 4091,
+        "AvailabilityZone": "us-east-1f",
+        "DefaultForAz": true,
+        "MapPublicIpOnLaunch": true
+      },
+      {
+        "AvailabilityZoneId": "use1-az2",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "subnet-public1-us-east-1a"
+          }
+        ],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-009359c6d851f8eae",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-009359c6d851f8eae",
+        "State": "available",
+        "VpcId": "vpc-041f8dd82ac945bd2",
+        "CidrBlock": "10.5.0.0/20",
+        "AvailableIpAddressCount": 4091,
+        "AvailabilityZone": "us-east-1a",
+        "DefaultForAz": false,
+        "MapPublicIpOnLaunch": false
+      },
+      {
+        "AvailabilityZoneId": "use1-az1",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-0c2adbc1fba79553d",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-0c2adbc1fba79553d",
+        "State": "available",
+        "VpcId": "vpc-01ca7ecbbf83397cf",
+        "CidrBlock": "172.31.0.0/20",
+        "AvailableIpAddressCount": 4091,
+        "AvailabilityZone": "us-east-1d",
+        "DefaultForAz": true,
+        "MapPublicIpOnLaunch": true
+      },
+      {
+        "AvailabilityZoneId": "use1-az3",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-0f67563be8a7e06b7",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-0f67563be8a7e06b7",
+        "State": "available",
+        "VpcId": "vpc-01ca7ecbbf83397cf",
+        "CidrBlock": "172.31.48.0/20",
+        "AvailableIpAddressCount": 4091,
+        "AvailabilityZone": "us-east-1e",
+        "DefaultForAz": true,
+        "MapPublicIpOnLaunch": true
+      },
+      {
+        "AvailabilityZoneId": "use1-az2",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cloud_rpl-subnet-public1-us-east-1a"
+          }
+        ],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-062fd88b627990558",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-062fd88b627990558",
+        "State": "available",
+        "VpcId": "vpc-060e3db7a34290fd2",
+        "CidrBlock": "10.5.0.0/20",
+        "AvailableIpAddressCount": 4090,
+        "AvailabilityZone": "us-east-1a",
+        "DefaultForAz": false,
+        "MapPublicIpOnLaunch": false
+      },
+      {
+        "AvailabilityZoneId": "use1-az4",
+        "MapCustomerOwnedIpOnLaunch": false,
+        "OwnerId": "759713773111",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "subnet-public2-us-east-1b"
+          }
+        ],
+        "SubnetArn": "arn:aws:ec2:us-east-1:759713773111:subnet/subnet-08d09b599fa2c32bb",
+        "EnableDns64": false,
+        "Ipv6Native": false,
+        "PrivateDnsNameOptionsOnLaunch": {
+          "HostnameType": "ip-name",
+          "EnableResourceNameDnsARecord": false,
+          "EnableResourceNameDnsAAAARecord": false
+        },
+        "BlockPublicAccessStates": {
+          "InternetGatewayBlockMode": "off"
+        },
+        "SubnetId": "subnet-08d09b599fa2c32bb",
+        "State": "available",
+        "VpcId": "vpc-041f8dd82ac945bd2",
+        "CidrBlock": "10.5.16.0/20",
+        "AvailableIpAddressCount": 4091,
+        "AvailabilityZone": "us-east-1b",
+        "DefaultForAz": false,
+        "MapPublicIpOnLaunch": false
+      }
+    ],
+    "ResponseMetadata": {
+      "RequestId": "fa2f1595-6284-4e68-b445-cbe35f5dace2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "x-amzn-requestid": "fa2f1595-6284-4e68-b445-cbe35f5dace2",
+        "cache-control": "no-cache, no-store",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "accept-encoding",
+        "content-type": "text/xml;charset=UTF-8",
+        "transfer-encoding": "chunked",
+        "date": "Sun, 23 Mar 2025 17:10:07 GMT",
+        "server": "AmazonEC2"
+      },
+      "RetryAttempts": 0
+    }
+  }
+}
